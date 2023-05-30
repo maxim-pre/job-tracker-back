@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-jobs = Job.create({
+Job.insert_all([{
     title: 'software engineer',
     url: "http://bugtrackeradmin.herokuapp.com",
     company: 'google',
@@ -15,6 +15,7 @@ jobs = Job.create({
     date_applied: "15/05/2023",
     status: "applied",
     min_salary: "30000",
-    min_salary: "40000",
+    max_salary: "40000",
     user_id: 1,
-})
+}])
+
