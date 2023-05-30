@@ -8,4 +8,7 @@ class User < ApplicationRecord
 
 
   validates :first_name, :last_name, :salary_min, :salary_max, :target_title, presence: true 
+  validates :first_name, :last_name, :target_title, length: {minimum: 3, maximum: 55}
+  validates :min_salary, :max_salary, numericality: {only_integer: true}
+
 end

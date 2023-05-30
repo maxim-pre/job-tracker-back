@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_30_140434) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_30_163800) do
   create_table "jobs", force: :cascade do |t|
     t.string "title"
     t.string "url"
@@ -18,7 +18,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_30_140434) do
     t.string "location"
     t.text "description"
     t.date "date_applied"
-    t.string "status"
+    t.string "status", default: "bookmarked"
     t.integer "min_salary"
     t.integer "max_salary"
     t.integer "user_id", null: false

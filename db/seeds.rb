@@ -5,11 +5,14 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+require 'faker'
 
-Job.insert_all([{
-    title: 'software engineer',
+
+10.times do
+    Job.create({
+    title: 'software Engineer',
     url: "http://bugtrackeradmin.herokuapp.com",
-    company: 'google',
+    company: Faker::Company.name,
     location: 'London',
     description: 'senior software engineering position',
     date_applied: "15/05/2023",
@@ -17,5 +20,5 @@ Job.insert_all([{
     min_salary: "30000",
     max_salary: "40000",
     user_id: 1,
-}])
-
+    })
+end
