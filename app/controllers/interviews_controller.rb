@@ -24,7 +24,7 @@ class InterviewsController < ApplicationController
         if @interview.update(interview_params)
             render json: {status: 'SUCCESS', message:'interview updated', data:@interview}, status: :ok 
         else
-            render json: {status: 'Error', message:'Unable to update job', data:@interview}, status: :unprocessable_entity
+            render json: {status: 'Error', message:'Unable to update interview', data:@interview}, status: :unprocessable_entity
         end
     end
 
