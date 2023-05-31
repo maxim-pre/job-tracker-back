@@ -11,7 +11,9 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
 
-  resources :jobs
+  resources :jobs do 
+    resources :interviews 
+  end
   resources :contacts
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
