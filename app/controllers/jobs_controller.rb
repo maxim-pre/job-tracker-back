@@ -28,7 +28,7 @@ class JobsController < ApplicationController
         if @job.update(job_params)
             render json: {status: 'SUCCESS', message:'Job updated', data:@job}, status: :ok 
         else
-            render json: {status: 'Error', message:'Unable to update job', data:@job}, status: :ok
+            render json: {status: 'Error', message:'Unable to update job', data:@job}, status: :unprocessable_entity
         end
     end
 
