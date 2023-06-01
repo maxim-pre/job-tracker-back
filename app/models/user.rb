@@ -8,7 +8,8 @@ class User < ApplicationRecord
          :recoverable, :jwt_authenticatable, jwt_revocation_strategy: self
 
 
-  validates :first_name, :last_name, :salary_min, :salary_max, :target_title, presence: true 
-  validates :first_name, :last_name, :target_title, length: {minimum: 3, maximum: 55}
+  validates :first_name, :last_name, :email, :password, presence: true 
+  validates :first_name, :last_name, length: {minimum: 3, maximum: 55}
+  validates :password, length: {minimum:6, maximum:100}
 
 end
