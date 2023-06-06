@@ -8,7 +8,7 @@ class NotesController < ApplicationController
     end
 
     def create 
-        @note = Note.new((note_params))
+        @note = Note.new(note_params)
         @note.job_id = @job.id
         if @note.save 
             render json: {status: 'SUCCESS', message: 'note is saved', data:@note }, status: :ok
@@ -40,6 +40,6 @@ class NotesController < ApplicationController
     end
 
     def note_params 
-        params.permit(:title, :description)
+        params.permit(:title, :description, :job_id)
     end
 end
