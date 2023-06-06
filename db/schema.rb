@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_06_091441) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_06_164952) do
   create_table "contacts", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -74,8 +74,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_06_091441) do
     t.string "first_name"
     t.string "last_name"
     t.integer "application_goal", default: 5
-    t.integer "salary_min"
-    t.integer "salary_max"
+    t.integer "salary_min", default: 0
+    t.integer "salary_max", default: 0
     t.string "target_title"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["jti"], name: "index_users_on_jti", unique: true
