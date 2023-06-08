@@ -11,6 +11,7 @@ gem 'devise'
 gem 'devise-jwt'
 gem 'jsonapi-serializer'
 gem 'faker'
+gem 'bundler', '~> 2.3.0'
 
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.2"
