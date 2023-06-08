@@ -11,16 +11,19 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2023_06_06_164952) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "contacts", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
     t.string "email"
     t.string "phone"
     t.text "description"
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "interview_id"
+    t.bigint "interview_id"
     t.index ["interview_id"], name: "index_contacts_on_interview_id"
     t.index ["user_id"], name: "index_contacts_on_user_id"
   end
@@ -31,7 +34,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_06_164952) do
     t.string "interview_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "job_id"
+    t.bigint "job_id"
     t.index ["job_id"], name: "index_interviews_on_job_id"
   end
 
@@ -45,7 +48,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_06_164952) do
     t.string "status", default: "bookmarked"
     t.integer "min_salary"
     t.integer "max_salary"
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "pay_period", default: "Yr"
@@ -56,7 +59,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_06_164952) do
   create_table "notes", force: :cascade do |t|
     t.string "title"
     t.text "description"
-    t.integer "job_id", null: false
+    t.bigint "job_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["job_id"], name: "index_notes_on_job_id"
