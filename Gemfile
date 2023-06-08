@@ -5,7 +5,7 @@ ruby "3.0.2"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.5"
-
+gem 'railties', '~> 7.0.5'
 gem 'rack-cors'
 gem 'devise'
 gem 'devise-jwt'
