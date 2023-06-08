@@ -83,5 +83,4 @@ test:
 #
 production:
   <<: *default
-  database: job-tracker-back_production
   url: <%= ENV['DATABASE_URL'] %>

@@ -201,7 +201,7 @@ DEPENDENCIES
   devise-jwt
   faker
   jsonapi-serializer
-  pg (~> 1.1)
+  pg (~> 1.2)
   puma (~> 5.0)
   rack-cors
   rails (~> 7.0.5)
